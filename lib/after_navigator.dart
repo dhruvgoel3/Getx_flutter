@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:state_management/language_change.dart';
 
 class AfterNavigator extends StatefulWidget {
   const AfterNavigator({super.key, required String name});
@@ -20,7 +21,12 @@ class _AfterNavigatorState extends State<AfterNavigator> {
                   onPressed: () {
                     Get.back();
                   },
-                  child: Text("click here to go back")))
+                  child: Text("click here to go back"))),
+          ElevatedButton(
+              onPressed: () {
+                Get.to(LanguageChange());
+              },
+              child: Text("Click here to go on language changing page"))
         ],
       ),
     );
